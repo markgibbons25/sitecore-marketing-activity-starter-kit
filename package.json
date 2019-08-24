@@ -1,0 +1,33 @@
+{
+	"name": "ma.angular",
+	"version": "1.0.0",
+	"description": "Marketing Automation Activity",
+	"main": "index.js",
+	"scripts": {
+		"predev": "npm install && rimraf ./codegen/",
+		"dev": "ngc -p ./src/tsconfig.aot.json && npm run build",
+		"prebuild": "rimraf ./dist/",
+		"build": "webpack -p --display-error-details"
+	},
+	"dependencies": {
+		"@angular/common": "5.2.11",
+		"@angular/compiler": "7.2.4",
+		"@angular/compiler-cli": "^7.2.4",
+		"@angular/core": "5.2.11",
+		"@angular/forms": "5.2.11",
+		"@angular/http": "5.2.11",
+		"@angular/platform-browser": "5.2.11",
+		"@ngx-translate/core": "^9.0.2",
+		"rxjs": "^5.5.11",
+		"typescript": "3.2.4",
+		"zone.js": "^0.8.4",
+		"@sitecore/ma-core": "./sitecore-packages/ma-core"
+	},
+	"devDependencies": {
+		"copyfiles": "^1.2.0",
+		"rimraf": "^2.6.1",
+		"ts-loader": "^5.3.3",
+		"webpack": "^4.29.3",
+		"webpack-cli": "^3.2.3"
+	}
+}
